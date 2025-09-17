@@ -1,0 +1,16 @@
+This folder contains brand logos and images for the website.
+
+Brand logos needed:
+- hp-logo.png
+- dell-logo.png
+- lenovo-logo.png
+- acer-logo.png
+- canon-logo.png
+- epson-logo.png
+- intel-logo.png
+- amd-logo.png
+
+Note: Replace these with actual brand logos. Use transparent PNG format for best results.
+Image dimensions should be approximately 200x80 pixels for consistent display.
+
+For now, the website uses Font Awesome icons as placeholders in the slider section.
