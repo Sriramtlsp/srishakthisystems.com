@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales - New & Used Computers, Laptops, Printers | SRI SHAKTHI SYSTEM AND SERVICE</title>
+    <meta name="description" content="Buy new and refurbished computers, laptops, and printers in Chennai. Quality products at competitive prices with warranty. HP, Dell, Lenovo, Canon, Epson.">
+    <meta name="keywords" content="computer sales Chennai, laptop sales, printer sales, refurbished laptops, used computers, HP Dell Lenovo Canon Epson">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/mobile.css">
+    <style>
+        body { font-family: 'Lato', sans-serif; }
+        .brand-green { background-color: #8BC53B; }
+        .brand-green-text { color: #8BC53B; }
+        .footer-gray { background-color: #939393; }
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #25D366;
+            border-radius: 50px;
+            padding: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+        }
+        .product-card {
+            transition: all 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <h1 class="text-2xl font-bold brand-green-text">SRI SHAKTHI SYSTEM AND SERVICE</h1>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-gray-700 hover:text-green-600 font-medium">Home</a>
+                <a href="services.html" class="text-gray-700 hover:text-green-600 font-medium">Services</a>
+                <a href="sales.html" class="text-green-600 hover:text-green-600 font-medium border-b-2 border-green-600">Sales</a>
+                <a href="rental.html" class="text-gray-700 hover:text-green-600 font-medium">Rental</a>
+                <a href="about.html" class="text-gray-700 hover:text-green-600 font-medium">About</a>
+                <a href="contact.html" class="text-gray-700 hover:text-green-600 font-medium">Contact</a>
+                <a href="blog.html" class="text-gray-700 hover:text-green-600 font-medium">Blog</a>
+            </nav>
+            <a href="https://api.whatsapp.com/send?phone=15558611761&text=Hello%20Sri%20Shakthi%20Systems,%20I%20need%20a%20quote." class="brand-green text-white px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition">Get a Quote</a>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-2 space-y-2">
+                <a href="index.html" class="block py-2 text-gray-700">Home</a>
+                <a href="services.html" class="block py-2 text-gray-700">Services</a>
+                <a href="sales.html" class="block py-2 text-green-600 font-semibold">Sales</a>
+                <a href="rental.html" class="block py-2 text-gray-700">Rental</a>
+                <a href="about.html" class="block py-2 text-gray-700">About</a>
+                <a href="contact.html" class="block py-2 text-gray-700">Contact</a>
+                <a href="blog.html" class="block py-2 text-gray-700">Blog</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-blue-50 to-green-50 py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Sales</h2>
+            <p class="text-xl text-gray-600">Quality computers, laptops, and printers at competitive prices</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-8 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="filter-btn active bg-green-500 text-white px-6 py-2 rounded-lg" onclick="filterProducts('all')">All Products</button>
+                <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-300" onclick="filterProducts('laptops')">Laptops</button>
+                <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-300" onclick="filterProducts('desktops')">Desktops</button>
+                <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-300" onclick="filterProducts('printers')">Printers</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="productsGrid">
+                
+                <!-- Laptop Products -->
+                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl" data-category="laptops">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-laptop text-6xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Refurbished Dell Latitude E5470</h3>
+                        <div class="text-sm text-gray-600 mb-3">
+                            <p>• Intel i5 6th Gen</p>
+                            <p>• 8GB RAM, 256GB SSD</p>
+                            <p>• 14" HD Display</p>
+                            <p>• Windows 11 Pro</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold brand-green-text">₹25,000</span>
+                            <button onclick="bookProduct('Refurbished Dell Latitude E5470')" class="brand-green text-white px-4 py-2 rounded hover:opacity-90 transition">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl" data-category="laptops">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-laptop text-6xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">HP EliteBook 840 G3</h3>
+                        <div class="text-sm text-gray-600 mb-3">
+                            <p>• Intel i5 6th Gen</p>
+                            <p>• 8GB RAM, 500GB HDD</p>
+                            <p>• 14" HD Display</p>
+                            <p>• Windows 10 Pro</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold brand-green-text">₹22,000</span>
+                            <button onclick="bookProduct('HP EliteBook 840 G3')" class="brand-green text-white px-4 py-2 rounded hover:opacity-90 transition">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl" data-category="laptops">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-laptop text-6xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Lenovo ThinkPad T460</h3>
+                        <div class="text-sm text-gray-600 mb-3">
+                            <p>• Intel i5 6th Gen</p>
+                            <p>• 8GB RAM, 256GB SSD</p>
+                            <p>• 14" HD Display</p>
+                            <p>• Windows 11 Pro</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold brand-green-text">₹24,500</span>
+                            <button onclick="bookProduct('Lenovo ThinkPad T460')" class="brand-green text-white px-4 py-2 rounded hover:opacity-90 transition">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl" data-category="laptops">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-laptop text-6xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">New Acer Aspire 5</h3>
+                        <div class="text-sm text-gray-600 mb-3">
+                            <p>• Intel i5 11th Gen</p>
+                            <p>• 8GB RAM, 512GB SSD</p>
+                            <p>• 15.6" FHD Display</p>
+                            <p>• Windows 11 Home</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold brand-green-text">₹45,000</span>
+                            <button onclick="bookProduct('New Acer Aspire 5')" class="brand-green text-white px-4 py-2 rounded hover:opacity-90 transition">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desktop Products -->
+                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl" data-category="desktops">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-desktop text-6xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Dell OptiPlex 7040</h3>
+                        <div class="text-sm text-gray-600 mb-3">
+                            <p>• Intel i5 6th Gen</p>
+                            <p>• 8GB RAM, 500GB HDD</p>
+                            <p>• Integrated Graphics</p>
+                            <p>• Windows 10 Pro</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold brand-green-text">₹18,000</span>
+                            <button onclick="bookProduct('Dell OptiPlex 7040')" class="brand-green text-white px-4 py-2 rounded hover:opacity-90 transition">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl" data-category="desktops">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-desktop text-6xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">HP ProDesk 600 G2</h3>
+                        <div class="text-sm text-gray-600 mb-3">
+                            <p>• Intel i5 6th Gen</p>
+                            <p>• 8GB RAM, 256GB SSD</p>
+                            <p>• Integrated Graphics</p>
+                            <p>• Windows 11 Pro</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold brand-green-text">₹20,000</span>
+                            <button onclick="bookProduct('HP ProDesk 600 G2')" class="brand-green text-white px-4 py-2 rounded hover:opacity-90 transition">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl" data-category="desktops">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-desktop text-6xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Custom Gaming PC</h3>
+                        <div class="text-sm text-gray-600 mb-3">
+                            <p>• Intel i7 10th Gen</p>
+                            <p>• 16GB RAM, 1TB SSD</p>
+                            <p>• GTX 1660 Graphics</p>
+                            <p>• Windows 11 Pro</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold brand-green-text">₹65,000</span>
+                            <button onclick="bookProduct('Custom Gaming PC')" class="brand-green text-white px-4 py-2 rounded hover:opacity-90 transition">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Printer Products -->
+                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl" data-category="printers">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-print text-6xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">HP LaserJet Pro M404n</h3>
+                        <div class="text-sm text-gray-600 mb-3">
+                            <p>• Monochrome Laser</p>
+                            <p>• 38 ppm print speed</p>
+                            <p>• Network connectivity</p>
+                            <p>• 1-year warranty</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold brand-green-text">₹15,000</span>
+                            <button onclick="bookProduct('HP LaserJet Pro M404n')" class="brand-green text-white px-4 py-2 rounded hover:opacity-90 transition">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl" data-category="printers">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-print text-6xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Canon PIXMA G3010</h3>
+                        <div class="text-sm text-gray-600 mb-3">
+                            <p>• All-in-One Inkjet</p>
+                            <p>• Print, Scan, Copy</p>
+                            <p>• Wi-Fi connectivity</p>
+                            <p>• Refillable ink tanks</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold brand-green-text">₹12,500</span>
+                            <button onclick="bookProduct('Canon PIXMA G3010')" class="brand-green text-white px-4 py-2 rounded hover:opacity-90 transition">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl" data-category="printers">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-print text-6xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Epson EcoTank L3150</h3>
+                        <div class="text-sm text-gray-600 mb-3">
+                            <p>• All-in-One Inkjet</p>
+                            <p>• Print, Scan, Copy</p>
+                            <p>• Wi-Fi Direct</p>
+                            <p>• Ultra-low cost printing</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold brand-green-text">₹14,000</span>
+                            <button onclick="bookProduct('Epson EcoTank L3150')" class="brand-green text-white px-4 py-2 rounded hover:opacity-90 transition">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl" data-category="printers">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-print text-6xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Brother HL-L2321D</h3>
+                        <div class="text-sm text-gray-600 mb-3">
+                            <p>• Monochrome Laser</p>
+                            <p>• Auto duplex printing</p>
+                            <p>• 30 ppm print speed</p>
+                            <p>• Compact design</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold brand-green-text">₹11,500</span>
+                            <button onclick="bookProduct('Brother HL-L2321D')" class="brand-green text-white px-4 py-2 rounded hover:opacity-90 transition">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Why Choose Our Products?</h3>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="brand-green text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Quality Assured</h4>
+                    <p class="text-gray-600">All products thoroughly tested and certified for optimal performance</p>
+                </div>
+                <div class="text-center">
+                    <div class="brand-green text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tools text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Warranty Support</h4>
+                    <p class="text-gray-600">Comprehensive warranty and after-sales service support</p>
+                </div>
+                <div class="text-center">
+                    <div class="brand-green text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tag text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Best Prices</h4>
+                    <p class="text-gray-600">Competitive pricing with flexible payment options</p>
+                </div>
+                <div class="text-center">
+                    <div class="brand-green text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shipping-fast text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Quick Delivery</h4>
+                    <p class="text-gray-600">Fast delivery and installation services available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-gray text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4">SRI SHAKTHI SYSTEM AND SERVICE</h4>
+                    <p class="mb-4">5/11, THIRUVANGADAM STREET<br>ADYAR, CHENNAI - 600020</p>
+                    <a href="https://maps.google.com/?q=5/11,+THIRUVANGADAM+STREET,+ADYAR,+CHENNAI+-+600020" target="_blank" class="text-green-300 hover:text-green-200">
+                        <i class="fas fa-map-marker-alt mr-2"></i>View on Google Maps
+                    </a>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-green-300">Home</a></li>
+                        <li><a href="services.html" class="hover:text-green-300">Services</a></li>
+                        <li><a href="sales.html" class="hover:text-green-300 text-green-300">Sales</a></li>
+                        <li><a href="rental.html" class="hover:text-green-300">Rental</a></li>
+                        <li><a href="about.html" class="hover:text-green-300">About</a></li>
+                        <li><a href="contact.html" class="hover:text-green-300">Contact</a></li>
+                        <li><a href="blog.html" class="hover:text-green-300">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Contact Info</h4>
+                    <div class="space-y-2">
+                        <p><i class="fas fa-phone mr-2"></i>9444100374</p>
+                        <p><i class="fas fa-phone mr-2"></i>044 24456062</p>
+                        <p><i class="fas fa-envelope mr-2"></i>srishakthisystemss@gmail.com</p>
+                    </div>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-2xl hover:text-green-300"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-2xl hover:text-green-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-2xl hover:text-green-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-2xl hover:text-green-300"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p>&copy; 2025 SRI SHAKTHI SYSTEM AND SERVICE. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://api.whatsapp.com/send?phone=15558611761&text=Hello%20Sri%20Shakthi%20Systems,%20I%20have%20a%20question." class="floating-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp text-white text-2xl"></i>
+    </a>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Product filtering functionality
+        function filterProducts(category) {
+            const products = document.querySelectorAll('.product-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            // Update button states
+            buttons.forEach(btn => {
+                btn.classList.remove('active', 'bg-green-500', 'text-white');
+                btn.classList.add('bg-gray-200', 'text-gray-700');
+            });
+            
+            event.target.classList.remove('bg-gray-200', 'text-gray-700');
+            event.target.classList.add('active', 'bg-green-500', 'text-white');
+            
+            // Filter products
+            products.forEach(product => {
+                if (category === 'all' || product.getAttribute('data-category') === category) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

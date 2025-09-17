@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Tech Tips & Guides | SRI SHAKTHI SYSTEM AND SERVICE</title>
+    <meta name="description" content="Read our latest tech tips, computer maintenance guides, and technology insights. Expert advice from SRI SHAKTHI SYSTEM AND SERVICE team in Chennai.">
+    <meta name="keywords" content="computer tips, laptop maintenance, printer troubleshooting, tech blog, technology guides, Chennai computer tips">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/mobile.css">
+    <style>
+        body { font-family: 'Lato', sans-serif; }
+        .brand-green { background-color: #8BC53B; }
+        .brand-green-text { color: #8BC53B; }
+        .footer-gray { background-color: #939393; }
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #25D366;
+            border-radius: 50px;
+            padding: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+        }
+        .blog-card {
+            transition: all 0.3s ease;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <h1 class="text-2xl font-bold brand-green-text">SRI SHAKTHI SYSTEM AND SERVICE</h1>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-gray-700 hover:text-green-600 font-medium">Home</a>
+                <a href="services.html" class="text-gray-700 hover:text-green-600 font-medium">Services</a>
+                <a href="sales.html" class="text-gray-700 hover:text-green-600 font-medium">Sales</a>
+                <a href="rental.html" class="text-gray-700 hover:text-green-600 font-medium">Rental</a>
+                <a href="about.html" class="text-gray-700 hover:text-green-600 font-medium">About</a>
+                <a href="contact.html" class="text-gray-700 hover:text-green-600 font-medium">Contact</a>
+                <a href="blog.html" class="text-green-600 hover:text-green-600 font-medium border-b-2 border-green-600">Blog</a>
+            </nav>
+            <a href="https://api.whatsapp.com/send?phone=15558611761&text=Hello%20Sri%20Shakthi%20Systems,%20I%20need%20a%20quote." class="brand-green text-white px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition">Get a Quote</a>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-2 space-y-2">
+                <a href="index.html" class="block py-2 text-gray-700">Home</a>
+                <a href="services.html" class="block py-2 text-gray-700">Services</a>
+                <a href="sales.html" class="block py-2 text-gray-700">Sales</a>
+                <a href="rental.html" class="block py-2 text-gray-700">Rental</a>
+                <a href="about.html" class="block py-2 text-gray-700">About</a>
+                <a href="contact.html" class="block py-2 text-gray-700">Contact</a>
+                <a href="blog.html" class="block py-2 text-green-600 font-semibold">Blog</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-blue-50 to-green-50 py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Tech Blog</h2>
+            <p class="text-xl text-gray-600">Expert tips, guides, and insights from our technical team</p>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden mb-12">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-gray-200 h-64 md:h-auto flex items-center justify-center">
+                        <i class="fas fa-laptop-code text-8xl text-gray-400"></i>
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold mr-3">Featured</span>
+                            <span class="text-gray-500 text-sm">January 15, 2025</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-800">5 Essential Tips to Speed Up Your Laptop Performance</h3>
+                        <p class="text-gray-600 mb-6">
+                            Is your laptop running slower than usual? Our expert technicians share the top 5 proven methods to boost your laptop's performance without spending money on new hardware. From cleaning up storage to optimizing startup programs, these tips will make your laptop feel like new again.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <i class="fas fa-user-circle text-2xl text-gray-400 mr-3"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-800">Technical Team</p>
+                                    <p class="text-sm text-gray-500">Sri Shakthi Systems</p>
+                                </div>
+                            </div>
+                            <button class="brand-green text-white px-6 py-2 rounded-lg hover:opacity-90 transition">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Categories -->
+    <section class="py-8 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="category-btn active bg-green-500 text-white px-6 py-2 rounded-lg" onclick="filterBlog('all')">All Articles</button>
+                <button class="category-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-300" onclick="filterBlog('maintenance')">Maintenance</button>
+                <button class="category-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-300" onclick="filterBlog('troubleshooting')">Troubleshooting</button>
+                <button class="category-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-300" onclick="filterBlog('tips')">Tips & Tricks</button>
+                <button class="category-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-300" onclick="filterBlog('security')">Security</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Articles Grid -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="blogGrid">
+                
+                <!-- Article 1 -->
+                <article class="blog-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl" data-category="maintenance">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-broom text-6xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-blue-100 text-blue-600 px-2 py-1 rounded text-sm font-semibold mr-2">Maintenance</span>
+                            <span class="text-gray-500 text-sm">January 10, 2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">How to Clean Your Computer Safely</h3>
+                        <p class="text-gray-600 mb-4">Learn the proper techniques to clean your computer inside and out without damaging sensitive components. Our step-by-step guide ensures your PC stays dust-free and cool.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500"><i class="fas fa-clock mr-1"></i>5 min read</span>
+                            <button class="text-green-600 hover:text-green-800 font-semibold">Read More</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="blog-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl" data-category="troubleshooting">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-exclamation-triangle text-6xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-semibold mr-2">Troubleshooting</span>
+                            <span class="text-gray-500 text-sm">January 8, 2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Common Printer Problems and Solutions</h3>
+                        <p class="text-gray-600 mb-4">Experiencing printer issues? Our comprehensive guide covers the most common printer problems and their solutions, from paper jams to connectivity issues.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500"><i class="fas fa-clock mr-1"></i>7 min read</span>
+                            <button class="text-green-600 hover:text-green-800 font-semibold">Read More</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="blog-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl" data-category="security">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-shield-alt text-6xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-purple-100 text-purple-600 px-2 py-1 rounded text-sm font-semibold mr-2">Security</span>
+                            <span class="text-gray-500 text-sm">January 5, 2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Protecting Your Computer from Viruses</h3>
+                        <p class="text-gray-600 mb-4">Essential cybersecurity tips to keep your computer safe from malware, viruses, and other online threats. Learn about antivirus software and safe browsing practices.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500"><i class="fas fa-clock mr-1"></i>6 min read</span>
+                            <button class="text-green-600 hover:text-green-800 font-semibold">Read More</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="blog-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl" data-category="tips">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-lightbulb text-6xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-yellow-100 text-yellow-600 px-2 py-1 rounded text-sm font-semibold mr-2">Tips & Tricks</span>
+                            <span class="text-gray-500 text-sm">January 3, 2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Extending Your Laptop Battery Life</h3>
+                        <p class="text-gray-600 mb-4">Maximize your laptop's battery performance with these proven tips. Learn about power settings, charging habits, and maintenance practices that extend battery lifespan.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500"><i class="fas fa-clock mr-1"></i>4 min read</span>
+                            <button class="text-green-600 hover:text-green-800 font-semibold">Read More</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="blog-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl" data-category="troubleshooting">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-wifi text-6xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-semibold mr-2">Troubleshooting</span>
+                            <span class="text-gray-500 text-sm">December 30, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Fixing Wi-Fi Connection Issues</h3>
+                        <p class="text-gray-600 mb-4">Struggling with Wi-Fi connectivity? Our troubleshooting guide helps you diagnose and fix common wireless network problems on Windows and other operating systems.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500"><i class="fas fa-clock mr-1"></i>8 min read</span>
+                            <button class="text-green-600 hover:text-green-800 font-semibold">Read More</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="blog-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl" data-category="maintenance">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-hdd text-6xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-blue-100 text-blue-600 px-2 py-1 rounded text-sm font-semibold mr-2">Maintenance</span>
+                            <span class="text-gray-500 text-sm">December 28, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">When to Replace vs. Repair Your Hard Drive</h3>
+                        <p class="text-gray-600 mb-4">Learn the warning signs of hard drive failure and understand when it's more cost-effective to replace rather than repair your storage device. Includes data backup tips.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500"><i class="fas fa-clock mr-1"></i>6 min read</span>
+                            <button class="text-green-600 hover:text-green-800 font-semibold">Read More</button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="py-16 bg-gradient-to-r from-green-500 to-blue-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-3xl font-bold mb-4">Stay Updated with Tech Tips</h3>
+            <p class="text-xl mb-8">Subscribe to our newsletter for the latest tech tips, guides, and service updates</p>
+            <div class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Enter your email address" class="flex-1 px-4 py-3 rounded-l-lg text-gray-800 focus:outline-none">
+                <button class="bg-white text-green-600 px-6 py-3 rounded-r-lg font-semibold hover:bg-gray-100 transition">Subscribe</button>
+            </div>
+            <p class="text-sm mt-4 opacity-80">We respect your privacy. Unsubscribe at any time.</p>
+        </div>
+    </section>
+
+    <!-- Popular Topics -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Popular Topics</h3>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="brand-green text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-laptop text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">Laptop Care</h4>
+                    <p class="text-gray-600 text-sm">Maintenance tips and troubleshooting guides</p>
+                </div>
+                <div class="text-center">
+                    <div class="brand-green text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-print text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">Printer Solutions</h4>
+                    <p class="text-gray-600 text-sm">Common issues and repair techniques</p>
+                </div>
+                <div class="text-center">
+                    <div class="brand-green text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">Security</h4>
+                    <p class="text-gray-600 text-sm">Protect your devices from threats</p>
+                </div>
+                <div class="text-center">
+                    <div class="brand-green text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tools text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">DIY Repairs</h4>
+                    <p class="text-gray-600 text-sm">Simple fixes you can do yourself</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-gray text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4">SRI SHAKTHI SYSTEM AND SERVICE</h4>
+                    <p class="mb-4">5/11, THIRUVANGADAM STREET<br>ADYAR, CHENNAI - 600020</p>
+                    <a href="https://maps.google.com/?q=5/11,+THIRUVANGADAM+STREET,+ADYAR,+CHENNAI+-+600020" target="_blank" class="text-green-300 hover:text-green-200">
+                        <i class="fas fa-map-marker-alt mr-2"></i>View on Google Maps
+                    </a>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-green-300">Home</a></li>
+                        <li><a href="services.html" class="hover:text-green-300">Services</a></li>
+                        <li><a href="sales.html" class="hover:text-green-300">Sales</a></li>
+                        <li><a href="rental.html" class="hover:text-green-300">Rental</a></li>
+                        <li><a href="about.html" class="hover:text-green-300">About</a></li>
+                        <li><a href="contact.html" class="hover:text-green-300">Contact</a></li>
+                        <li><a href="blog.html" class="hover:text-green-300 text-green-300">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Contact Info</h4>
+                    <div class="space-y-2">
+                        <p><i class="fas fa-phone mr-2"></i>15558611761</p>
+                        <p><i class="fas fa-phone mr-2"></i>044 24456062</p>
+                        <p><i class="fas fa-envelope mr-2"></i>srishakthisystemss@gmail.com</p>
+                    </div>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-2xl hover:text-green-300"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-2xl hover:text-green-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-2xl hover:text-green-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-2xl hover:text-green-300"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p>&copy; 2025 SRI SHAKTHI SYSTEM AND SERVICE. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://api.whatsapp.com/send?phone=15558611761&text=Hello%20Sri%20Shakthi%20Systems,%20I%20have%20a%20question." class="floating-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp text-white text-2xl"></i>
+    </a>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Blog filtering functionality
+        function filterBlog(category) {
+            const articles = document.querySelectorAll('.blog-card');
+            const buttons = document.querySelectorAll('.category-btn');
+            
+            // Update button states
+            buttons.forEach(btn => {
+                btn.classList.remove('active', 'bg-green-500', 'text-white');
+                btn.classList.add('bg-gray-200', 'text-gray-700');
+            });
+            
+            event.target.classList.remove('bg-gray-200', 'text-gray-700');
+            event.target.classList.add('active', 'bg-green-500', 'text-white');
+            
+            // Filter articles
+            articles.forEach(article => {
+                if (category === 'all' || article.getAttribute('data-category') === category) {
+                    article.style.display = 'block';
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Rentals - Computer, Laptop & Printer Rental Services | SRI SHAKTHI SYSTEM AND SERVICE</title>
+    <meta name="description" content="Flexible IT rental services in Chennai. Rent computers, laptops, and printers for events, businesses, and temporary needs. Cost-effective solutions.">
+    <meta name="keywords" content="computer rental Chennai, laptop rental, printer rental, IT equipment rental, event rentals, business rentals">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/mobile.css">
+    <style>
+        body { font-family: 'Lato', sans-serif; }
+        .brand-green { background-color: #8BC53B; }
+        .brand-green-text { color: #8BC53B; }
+        .footer-gray { background-color: #939393; }
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #25D366;
+            border-radius: 50px;
+            padding: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+        }
+        .rental-card {
+            transition: all 0.3s ease;
+        }
+        .rental-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <h1 class="text-2xl font-bold brand-green-text">SRI SHAKTHI SYSTEM AND SERVICE</h1>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-gray-700 hover:text-green-600 font-medium">Home</a>
+                <a href="services.html" class="text-gray-700 hover:text-green-600 font-medium">Services</a>
+                <a href="sales.html" class="text-gray-700 hover:text-green-600 font-medium">Sales</a>
+                <a href="rental.html" class="text-green-600 hover:text-green-600 font-medium border-b-2 border-green-600">Rental</a>
+                <a href="about.html" class="text-gray-700 hover:text-green-600 font-medium">About</a>
+                <a href="contact.html" class="text-gray-700 hover:text-green-600 font-medium">Contact</a>
+                <a href="blog.html" class="text-gray-700 hover:text-green-600 font-medium">Blog</a>
+            </nav>
+            <a href="https://api.whatsapp.com/send?phone=15558611761&text=Hello%20Sri%20Shakthi%20Systems,%20I%20need%20a%20quote." class="brand-green text-white px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition">Get a Quote</a>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-2 space-y-2">
+                <a href="index.html" class="block py-2 text-gray-700">Home</a>
+                <a href="services.html" class="block py-2 text-gray-700">Services</a>
+                <a href="sales.html" class="block py-2 text-gray-700">Sales</a>
+                <a href="rental.html" class="block py-2 text-green-600 font-semibold">Rental</a>
+                <a href="about.html" class="block py-2 text-gray-700">About</a>
+                <a href="contact.html" class="block py-2 text-gray-700">Contact</a>
+                <a href="blog.html" class="block py-2 text-gray-700">Blog</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-blue-50 to-green-50 py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">IT Rentals</h2>
+            <p class="text-xl text-gray-600">Flexible rental solutions for all your computing needs</p>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Why Choose Our Rental Services?</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="brand-green text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-rupee-sign text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Cost-Effective</h4>
+                    <p class="text-gray-600">Save money with our affordable rental rates instead of purchasing expensive equipment</p>
+                </div>
+                <div class="text-center">
+                    <div class="brand-green text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-calendar-check text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Perfect for Events</h4>
+                    <p class="text-gray-600">Ideal for conferences, training sessions, exhibitions, and temporary office setups</p>
+                </div>
+                <div class="text-center">
+                    <div class="brand-green text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-clock text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Flexible Plans</h4>
+                    <p class="text-gray-600">Short-term and long-term rental options to suit your specific requirements</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rental Products Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Available for Rent</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Laptop Rentals -->
+                <div class="rental-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-laptop text-6xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Business Laptops</h3>
+                        <div class="text-sm text-gray-600 mb-3">
+                            <p>• Intel i5 processors</p>
+                            <p>• 8GB RAM, SSD storage</p>
+                            <p>• Windows 11 Pro</p>
+                            <p>• Pre-configured software</p>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm">
+                                <span>Daily:</span>
+                                <span class="font-bold">₹300/day</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span>Weekly:</span>
+                                <span class="font-bold">₹1,800/week</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span>Monthly:</span>
+                                <span class="font-bold brand-green-text">₹6,000/month</span>
+                            </div>
+                        </div>
+                        <button onclick="requestRentalQuote('Business Laptops')" class="w-full brand-green text-white py-2 rounded hover:opacity-90 transition">Request Quote</button>
+                    </div>
+                </div>
+
+                <div class="rental-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-laptop text-6xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Gaming Laptops</h3>
+                        <div class="text-sm text-gray-600 mb-3">
+                            <p>• Intel i7 processors</p>
+                            <p>• 16GB RAM, dedicated GPU</p>
+                            <p>• High-refresh displays</p>
+                            <p>• Gaming software suite</p>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm">
+                                <span>Daily:</span>
+                                <span class="font-bold">₹500/day</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span>Weekly:</span>
+                                <span class="font-bold">₹3,000/week</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span>Monthly:</span>
+                                <span class="font-bold brand-green-text">₹10,000/month</span>
+                            </div>
+                        </div>
+                        <button onclick="requestRentalQuote('Gaming Laptops')" class="w-full brand-green text-white py-2 rounded hover:opacity-90 transition">Request Quote</button>
+                    </div>
+                </div>
+
+                <!-- Desktop Rentals -->
+                <div class="rental-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-desktop text-6xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Office Desktops</h3>
+                        <div class="text-sm text-gray-600 mb-3">
+                            <p>• Intel i5 processors</p>
+                            <p>• 8GB RAM, fast SSD</p>
+                            <p>• 21" LED monitor included</p>
+                            <p>• Keyboard & mouse</p>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm">
+                                <span>Daily:</span>
+                                <span class="font-bold">₹250/day</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span>Weekly:</span>
+                                <span class="font-bold">₹1,500/week</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span>Monthly:</span>
+                                <span class="font-bold brand-green-text">₹5,000/month</span>
+                            </div>
+                        </div>
+                        <button onclick="requestRentalQuote('Office Desktops')" class="w-full brand-green text-white py-2 rounded hover:opacity-90 transition">Request Quote</button>
+                    </div>
+                </div>
+
+                <div class="rental-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-desktop text-6xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Workstation PCs</h3>
+                        <div class="text-sm text-gray-600 mb-3">
+                            <p>• Intel i7/Xeon processors</p>
+                            <p>• 32GB RAM, professional GPU</p>
+                            <p>• 27" 4K monitor</p>
+                            <p>• CAD/Design software</p>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm">
+                                <span>Daily:</span>
+                                <span class="font-bold">₹800/day</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span>Weekly:</span>
+                                <span class="font-bold">₹5,000/week</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span>Monthly:</span>
+                                <span class="font-bold brand-green-text">₹18,000/month</span>
+                            </div>
+                        </div>
+                        <button onclick="requestRentalQuote('Workstation PCs')" class="w-full brand-green text-white py-2 rounded hover:opacity-90 transition">Request Quote</button>
+                    </div>
+                </div>
+
+                <!-- Printer Rentals -->
+                <div class="rental-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-print text-6xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Laser Printers</h3>
+                        <div class="text-sm text-gray-600 mb-3">
+                            <p>• High-speed printing</p>
+                            <p>• Network connectivity</p>
+                            <p>• Duplex printing</p>
+                            <p>• Toner included</p>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm">
+                                <span>Daily:</span>
+                                <span class="font-bold">₹150/day</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span>Weekly:</span>
+                                <span class="font-bold">₹900/week</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span>Monthly:</span>
+                                <span class="font-bold brand-green-text">₹3,000/month</span>
+                            </div>
+                        </div>
+                        <button onclick="requestRentalQuote('Laser Printers')" class="w-full brand-green text-white py-2 rounded hover:opacity-90 transition">Request Quote</button>
+                    </div>
+                </div>
+
+                <div class="rental-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-print text-6xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Multifunction Printers</h3>
+                        <div class="text-sm text-gray-600 mb-3">
+                            <p>• Print, Scan, Copy, Fax</p>
+                            <p>• Color & monochrome</p>
+                            <p>• Document feeder</p>
+                            <p>• Network scanning</p>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm">
+                                <span>Daily:</span>
+                                <span class="font-bold">₹200/day</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span>Weekly:</span>
+                                <span class="font-bold">₹1,200/week</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span>Monthly:</span>
+                                <span class="font-bold brand-green-text">₹4,000/month</span>
+                            </div>
+                        </div>
+                        <button onclick="requestRentalQuote('Multifunction Printers')" class="w-full brand-green text-white py-2 rounded hover:opacity-90 transition">Request Quote</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Rental Process Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">How Our Rental Process Works</h3>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-green-100 text-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
+                    <h4 class="text-lg font-bold mb-2">Request Quote</h4>
+                    <p class="text-gray-600">Contact us with your requirements and rental duration</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-green-100 text-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
+                    <h4 class="text-lg font-bold mb-2">Get Pricing</h4>
+                    <p class="text-gray-600">Receive competitive pricing and equipment availability</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-green-100 text-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
+                    <h4 class="text-lg font-bold mb-2">Setup & Delivery</h4>
+                    <p class="text-gray-600">We deliver and set up the equipment at your location</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-green-100 text-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">4</div>
+                    <h4 class="text-lg font-bold mb-2">Support & Pickup</h4>
+                    <p class="text-gray-600">Ongoing support during rental and pickup when done</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bulk Rental Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="bg-gradient-to-r from-green-500 to-blue-600 text-white rounded-lg p-8 text-center">
+                <h3 class="text-3xl font-bold mb-4">Need Bulk Rentals?</h3>
+                <p class="text-xl mb-6">Special discounts available for bulk orders and long-term rentals</p>
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <div>
+                        <h4 class="text-lg font-bold mb-2">Corporate Events</h4>
+                        <p>Conferences, training sessions, product launches</p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold mb-2">Educational Institutions</h4>
+                        <p>Schools, colleges, training centers</p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold mb-2">Temporary Offices</h4>
+                        <p>Project sites, temporary setups, expansions</p>
+                    </div>
+                </div>
+                <a href="https://api.whatsapp.com/send?phone=15558611761&text=Hello%20Sri%20Shakthi%20Systems,%20I%20need%20bulk%20rental%20pricing." class="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition inline-block">
+                    <i class="fab fa-whatsapp mr-2"></i>Get Bulk Pricing
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-gray text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4">SRI SHAKTHI SYSTEM AND SERVICE</h4>
+                    <p class="mb-4">5/11, THIRUVANGADAM STREET<br>ADYAR, CHENNAI - 600020</p>
+                    <a href="https://maps.google.com/?q=5/11,+THIRUVANGADAM+STREET,+ADYAR,+CHENNAI+-+600020" target="_blank" class="text-green-300 hover:text-green-200">
+                        <i class="fas fa-map-marker-alt mr-2"></i>View on Google Maps
+                    </a>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-green-300">Home</a></li>
+                        <li><a href="services.html" class="hover:text-green-300">Services</a></li>
+                        <li><a href="sales.html" class="hover:text-green-300">Sales</a></li>
+                        <li><a href="rental.html" class="hover:text-green-300 text-green-300">Rental</a></li>
+                        <li><a href="about.html" class="hover:text-green-300">About</a></li>
+                        <li><a href="contact.html" class="hover:text-green-300">Contact</a></li>
+                        <li><a href="blog.html" class="hover:text-green-300">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Contact Info</h4>
+                    <div class="space-y-2">
+                        <p><i class="fas fa-phone mr-2"></i>9444100374</p>
+                        <p><i class="fas fa-phone mr-2"></i>044 24456062</p>
+                        <p><i class="fas fa-envelope mr-2"></i>srishakthisystemss@gmail.com</p>
+                    </div>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-2xl hover:text-green-300"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-2xl hover:text-green-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-2xl hover:text-green-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-2xl hover:text-green-300"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p>&copy; 2025 SRI SHAKTHI SYSTEM AND SERVICE. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://api.whatsapp.com/send?phone=15558611761&text=Hello%20Sri%20Shakthi%20Systems,%20I%20have%20a%20question." class="floating-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp text-white text-2xl"></i>
+    </a>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

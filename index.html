@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRI SHAKTHI SYSTEM AND SERVICE - Expert Computer, Laptop & Printer Solutions in Chennai</title>
+    <meta name="description" content="Professional computer, laptop, and printer sales, service, and rental in Chennai. Expert technicians, genuine parts, quick turnaround. Contact: 9444100374">
+    <meta name="keywords" content="computer repair Chennai, laptop service, printer repair, computer sales, laptop rental, Adyar computer service">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/mobile.css">
+    <style>
+        body { 
+            font-family: 'Lato', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .brand-green { background-color: #8BC53B; }
+        .brand-green-text { color: #8BC53B; }
+        .footer-gray { background-color: #939393; }
+        
+        /* Mobile-optimized floating WhatsApp button */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #25D366;
+            border-radius: 50px;
+            padding: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            min-height: 56px;
+            min-width: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Mobile responsive adjustments */
+        @media (max-width: 768px) {
+            .floating-whatsapp {
+                bottom: 80px;
+                right: 15px;
+                padding: 12px;
+            }
+        }
+        
+        .slider {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .slider-track {
+            display: inline-block;
+            animation: slide 20s linear infinite;
+        }
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        /* Mobile-optimized chatbot */
+        .chatbot {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 999;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            width: 300px;
+            max-height: 400px;
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .chatbot {
+                width: 90vw;
+                left: 5vw;
+                right: auto;
+                bottom: 140px;
+                max-height: 60vh;
+            }
+        }
+        
+        .chatbot-toggle {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+            background-color: #8BC53B;
+            border-radius: 50px;
+            padding: 12px;
+            cursor: pointer;
+            min-height: 48px;
+            min-width: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        @media (max-width: 768px) {
+            .chatbot-toggle {
+                bottom: 80px;
+                left: 15px;
+            }
+        }
+        
+        /* Touch-friendly buttons */
+        .touch-device button,
+        .touch-device .btn,
+        .touch-device a[class*="bg-"] {
+            min-height: 48px;
+            min-width: 48px;
+        }
+        
+        /* Mobile form optimizations */
+        @media (max-width: 768px) {
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            textarea,
+            select {
+                font-size: 16px !important; /* Prevent zoom on iOS */
+                padding: 12px 16px;
+            }
+            
+            /* Mobile hero text adjustments */
+            .hero-title {
+                font-size: 2.5rem;
+                line-height: 1.2;
+            }
+            
+            /* Mobile card spacing */
+            .mobile-card-spacing {
+                margin-bottom: 1rem;
+            }
+            
+            /* Mobile navigation improvements */
+            #mobileMenu {
+                transition: all 0.3s ease;
+                max-height: 0;
+                overflow: hidden;
+            }
+            
+            #mobileMenu:not(.hidden) {
+                max-height: 400px;
+            }
+        }
+        
+        /* Improve tap targets */
+        @media (max-width: 768px) {
+            .nav-link {
+                padding: 12px 0;
+                display: block;
+                border-bottom: 1px solid #f0f0f0;
+            }
+            
+            .nav-link:last-child {
+                border-bottom: none;
+            }
+        }
+        
+        /* Mobile-specific animations */
+        @media (prefers-reduced-motion: reduce) {
+            .slider-track {
+                animation: none;
+            }
+            
+            .floating-whatsapp:hover {
+                transform: none;
+            }
+        }
+    </style>
+    <!-- Schema Markup for Local Business -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "SRI SHAKTHI SYSTEM AND SERVICE",
+        "description": "Professional computer, laptop, and printer sales, service, and rental in Chennai",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "5/11, THIRUVANGADAM STREET",
+            "addressLocality": "ADYAR",
+            "addressRegion": "CHENNAI",
+            "postalCode": "600020",
+            "addressCountry": "IN"
+        },
+        "telephone": "+91-9444100374",
+        "email": "srishakthisystemss@gmail.com",
+        "url": "https://srishakthisystems.com",
+        "openingHours": "Mo-Sa 09:00-18:00",
+        "priceRange": "$$",
+        "serviceArea": "Chennai"
+    }
+    </script>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <h1 class="text-2xl font-bold brand-green-text">SRI SHAKTHI SYSTEM AND SERVICE</h1>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-gray-700 hover:text-green-600 font-medium">Home</a>
+                <a href="services.html" class="text-gray-700 hover:text-green-600 font-medium">Services</a>
+                <a href="sales.html" class="text-gray-700 hover:text-green-600 font-medium">Sales</a>
+                <a href="rental.html" class="text-gray-700 hover:text-green-600 font-medium">Rental</a>
+                <a href="about.html" class="text-gray-700 hover:text-green-600 font-medium">About</a>
+                <a href="contact.html" class="text-gray-700 hover:text-green-600 font-medium">Contact</a>
+                <a href="blog.html" class="text-gray-700 hover:text-green-600 font-medium">Blog</a>
+            </nav>
+            <a href="https://api.whatsapp.com/send?phone=15558611761&text=Hello%20Sri%20Shakthi%20Systems,%20I%20need%20a%20quote." class="brand-green text-white px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition">Get a Quote</a>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t shadow-lg">
+            <div class="px-4 py-3">
+                <a href="index.html" class="nav-link block py-3 text-gray-700 hover:text-green-600 font-medium border-b border-gray-100">
+                    <i class="fas fa-home mr-3 text-green-500"></i>Home
+                </a>
+                <a href="services.html" class="nav-link block py-3 text-gray-700 hover:text-green-600 font-medium border-b border-gray-100">
+                    <i class="fas fa-tools mr-3 text-blue-500"></i>Services
+                </a>
+                <a href="sales.html" class="nav-link block py-3 text-gray-700 hover:text-green-600 font-medium border-b border-gray-100">
+                    <i class="fas fa-shopping-cart mr-3 text-purple-500"></i>Sales
+                </a>
+                <a href="rental.html" class="nav-link block py-3 text-gray-700 hover:text-green-600 font-medium border-b border-gray-100">
+                    <i class="fas fa-calendar-alt mr-3 text-orange-500"></i>Rental
+                </a>
+                <a href="about.html" class="nav-link block py-3 text-gray-700 hover:text-green-600 font-medium border-b border-gray-100">
+                    <i class="fas fa-info-circle mr-3 text-indigo-500"></i>About
+                </a>
+                <a href="contact.html" class="nav-link block py-3 text-gray-700 hover:text-green-600 font-medium border-b border-gray-100">
+                    <i class="fas fa-phone mr-3 text-red-500"></i>Contact
+                </a>
+                <a href="blog.html" class="nav-link block py-3 text-gray-700 hover:text-green-600 font-medium">
+                    <i class="fas fa-blog mr-3 text-yellow-500"></i>Blog
+                </a>
+                <div class="pt-3 mt-3 border-t border-gray-200">
+                    <a href="https://api.whatsapp.com/send?phone=15558611761&text=Hello%20Sri%20Shakthi%20Systems,%20I%20need%20assistance." class="block w-full bg-green-500 text-white text-center py-3 rounded-lg font-semibold hover:bg-green-600 transition">
+                        <i class="fab fa-whatsapp mr-2"></i>WhatsApp Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-50 to-green-50 py-12 md:py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="hero-title text-3xl sm:text-4xl md:text-6xl font-bold text-gray-800 mb-4 md:mb-6 leading-tight">Expert Computer, Laptop & Printer Solutions in Chennai</h2>
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-600 mb-6 md:mb-8 px-2">Sales, Certified Repairs, and Flexible Rentals. Your Trusted Technology Partner.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#service-form" class="brand-green text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:opacity-90 transition inline-block w-full sm:w-auto max-w-xs">Request Service Now</a>
+                <a href="https://api.whatsapp.com/send?phone=15558611761&text=Hello%20Sri%20Shakthi%20Systems,%20I%20need%20immediate%20assistance." class="bg-green-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-green-700 transition inline-block w-full sm:w-auto max-w-xs">
+                    <i class="fab fa-whatsapp mr-2"></i>WhatsApp Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Logos Slider -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h3 class="text-2xl font-bold text-center mb-8 text-gray-800">Trusted Brands We Service</h3>
+            <div class="slider">
+                <div class="slider-track">
+                    <div class="inline-block mx-8">
+                        <img src="assets/images/hp-logo.png" alt="HP" class="h-16 w-auto opacity-70 hover:opacity-100 transition">
+                    </div>
+                    <div class="inline-block mx-8">
+                        <img src="assets/images/dell-logo.png" alt="Dell" class="h-16 w-auto opacity-70 hover:opacity-100 transition">
+                    </div>
+                    <div class="inline-block mx-8">
+                        <img src="assets/images/lenovo-logo.png" alt="Lenovo" class="h-16 w-auto opacity-70 hover:opacity-100 transition">
+                    </div>
+                    <div class="inline-block mx-8">
+                        <img src="assets/images/acer-logo.png" alt="Acer" class="h-16 w-auto opacity-70 hover:opacity-100 transition">
+                    </div>
+                    <div class="inline-block mx-8">
+                        <img src="assets/images/canon-logo.png" alt="Canon" class="h-16 w-auto opacity-70 hover:opacity-100 transition">
+                    </div>
+                    <div class="inline-block mx-8">
+                        <img src="assets/images/epson-logo.png" alt="Epson" class="h-16 w-auto opacity-70 hover:opacity-100 transition">
+                    </div>
+                    <div class="inline-block mx-8">
+                        <img src="assets/images/intel-logo.png" alt="Intel" class="h-16 w-auto opacity-70 hover:opacity-100 transition">
+                    </div>
+                    <div class="inline-block mx-8">
+                        <img src="assets/images/amd-logo.png" alt="AMD" class="h-16 w-auto opacity-70 hover:opacity-100 transition">
+                    </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="inline-block mx-8">
+                        <img src="assets/images/hp-logo.png" alt="HP" class="h-16 w-auto opacity-70 hover:opacity-100 transition">
+                    </div>
+                    <div class="inline-block mx-8">
+                        <img src="assets/images/dell-logo.png" alt="Dell" class="h-16 w-auto opacity-70 hover:opacity-100 transition">
+                    </div>
+                    <div class="inline-block mx-8">
+                        <img src="assets/images/lenovo-logo.png" alt="Lenovo" class="h-16 w-auto opacity-70 hover:opacity-100 transition">
+                    </div>
+                    <div class="inline-block mx-8">
+                        <img src="assets/images/acer-logo.png" alt="Acer" class="h-16 w-auto opacity-70 hover:opacity-100 transition">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Services</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition">
+                    <div class="brand-green text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-laptop text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Computer & Laptop Service</h4>
+                    <p class="text-gray-600">Chip-level motherboard repair, OS installation, virus removal, and hardware upgrades.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition">
+                    <div class="brand-green text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-print text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Printer Service</h4>
+                    <p class="text-gray-600">All major brands servicing, toner refilling, and general maintenance for optimal performance.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition">
+                    <div class="brand-green text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shopping-cart text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">New & Used Sales</h4>
+                    <p class="text-gray-600">Quality laptops, desktops, and printers at competitive prices with warranty support.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition">
+                    <div class="brand-green text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-calendar-alt text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">IT Rentals</h4>
+                    <p class="text-gray-600">Flexible rental plans for businesses, events, and temporary requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Request Form -->
+    <section id="service-form" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto">
+                <h3 class="text-3xl font-bold text-center mb-8 text-gray-800">Request a Service</h3>
+                <form id="serviceForm" class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Name *</label>
+                            <input type="text" id="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Phone Number *</label>
+                            <input type="tel" id="phone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500">
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-semibold mb-2">Device Type *</label>
+                        <select id="deviceType" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500">
+                            <option value="">Select Device Type</option>
+                            <option value="Laptop">Laptop</option>
+                            <option value="Desktop">Desktop</option>
+                            <option value="Printer">Printer</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-semibold mb-2">Briefly Describe the Issue *</label>
+                        <textarea id="issue" required rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500" placeholder="Please describe the problem you're experiencing..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full brand-green text-white py-3 rounded-lg text-lg font-semibold hover:opacity-90 transition">
+                        <i class="fab fa-whatsapp mr-2"></i>Send Request via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-gray text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4">SRI SHAKTHI SYSTEM AND SERVICE</h4>
+                    <p class="mb-4">5/11, THIRUVANGADAM STREET<br>ADYAR, CHENNAI - 600020</p>
+                    <a href="https://maps.google.com/?q=5/11,+THIRUVANGADAM+STREET,+ADYAR,+CHENNAI+-+600020" target="_blank" class="text-green-300 hover:text-green-200">
+                        <i class="fas fa-map-marker-alt mr-2"></i>View on Google Maps
+                    </a>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-green-300">Home</a></li>
+                        <li><a href="services.html" class="hover:text-green-300">Services</a></li>
+                        <li><a href="sales.html" class="hover:text-green-300">Sales</a></li>
+                        <li><a href="rental.html" class="hover:text-green-300">Rental</a></li>
+                        <li><a href="about.html" class="hover:text-green-300">About</a></li>
+                        <li><a href="contact.html" class="hover:text-green-300">Contact</a></li>
+                        <li><a href="blog.html" class="hover:text-green-300">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Contact Info</h4>
+                    <div class="space-y-2">
+                        <p><i class="fas fa-phone mr-2"></i>9444100374</p>
+                        <p><i class="fas fa-phone mr-2"></i>044 24456062</p>
+                        <p><i class="fas fa-envelope mr-2"></i>srishakthisystemss@gmail.com</p>
+                    </div>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-2xl hover:text-green-300"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-2xl hover:text-green-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-2xl hover:text-green-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-2xl hover:text-green-300"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p>&copy; 2025 SRI SHAKTHI SYSTEM AND SERVICE. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://api.whatsapp.com/send?phone=15558611761&text=Hello%20Sri%20Shakthi%20Systems,%20I%20have%20a%20question." class="floating-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp text-white text-2xl"></i>
+    </a>
+
+    <!-- Chatbot Toggle -->
+    <div class="chatbot-toggle" onclick="toggleChatbot()">
+        <i class="fas fa-comments text-white text-xl"></i>
+    </div>
+
+    <!-- Chatbot -->
+    <div id="chatbot" class="chatbot">
+        <div class="bg-green-500 text-white p-4 rounded-t-lg">
+            <h4 class="font-bold">Sri Shakthi Systems</h4>
+            <p class="text-sm">How can we help you today?</p>
+        </div>
+        <div class="p-4 space-y-3">
+            <button onclick="chatbotAction('service')" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">Service Request</button>
+            <button onclick="chatbotAction('sales')" class="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600">Sales Inquiry</button>
+            <button onclick="chatbotAction('question')" class="w-full bg-gray-500 text-white py-2 rounded hover:bg-gray-600">Ask a Question</button>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
